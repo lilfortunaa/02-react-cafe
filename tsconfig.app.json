@@ -6,16 +6,15 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": true,
 
-    "jsx": "react",
-    "types": ["react", "react-dom"],
+    "jsx": "react-jsx",
 
+    "types": ["react", "react-dom"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
