@@ -1,22 +1,17 @@
-import type { JSX } from "react";
 import styles from "./VoteStats.module.css";
-
-interface Votes {
-  good: number;
-  neutral: number;
-  bad: number;
-}
+import type { Votes } from "../../types/votes";
 
 interface VoteStatsProps {
   votes: Votes;
   totalVotes: number;
   positiveRate: number;
 }
+
 export default function VoteStats({
   votes,
   totalVotes,
   positiveRate,
-}: VoteStatsProps): JSX.Element {
+}: VoteStatsProps) {
   return (
     <div className={styles.container}>
       <p className={styles.stat}>

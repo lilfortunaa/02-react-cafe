@@ -3,15 +3,16 @@ import css from "./App.module.css";
 import CafeInfo from "../CafeInfo/CafeInfo";
 import VoteOptions from "../VoteOptions/VoteOptions";
 import VoteStats from "../VoteStats/VoteStats";
-import Notify from "../Notification/Notification";
+import Notification from "../Notification/Notification";
+import type { Votes, VoteType } from "../../types/votes";
 
 export default function App() {
-  const [votes, setVotes] = useState({
+  const [votes, setVotes] = useState<Votes>({
     good: 0,
     neutral: 0,
     bad: 0,
   });
-  const VoteClick = (option: keyof typeof votes) => {
+  const VoteClick = (option: VoteType) => {
     setVotes((prevVotes) => ({
       ...prevVotes,
       [option]: prevVotes[option] + 1,
@@ -39,7 +40,7 @@ export default function App() {
           positiveRate={positiveRate}
         />
       ) : (
-        <Notify />
+        <Notification />
       )}
     </div>
   );
